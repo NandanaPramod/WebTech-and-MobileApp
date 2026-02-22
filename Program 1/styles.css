@@ -1,1 +1,99 @@
+/* Color Palette */
+:root {
+    --color-1: #a59c9c;   /* (165,156,156) */
+    --color-2: #e5cedd;   /* (229,206,221) */
+    --color-3: #9ea692;   /* (158,166,146) */
+    --color-4: #7f8b9a;   /* (127,139,154) */
+    --color-5: #d8b7b7;   /* (216,183,183) */
+}
 
+/* CSS using the provided color palette */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-2); /* Light Purple */
+    margin: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-4); /* Slate Blue */
+    border-bottom: 3px solid var(--color-3);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: var(--color-4); /* Slate Blue */
+    margin-top: 30px;
+}
+
+/* Styling the Unordered List */
+.student-details {
+    list-style-type: square;
+    background-color: var(--color-5); /* Light Pink */
+    padding: 20px 40px;
+    border-left: 5px solid var(--color-3); /* Green */
+    border-radius: 5px;
+}
+
+.student-details li {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling the Ordered List */
+.registration-steps {
+    background-color: var(--color-1); /* Gray */
+    padding: 20px 40px;
+    border-left: 5px solid var(--color-4);
+    border-radius: 5px;
+    color: white;
+}
+
+.registration-steps li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Styling the Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Adding attributes requested in Step 11 */
+table, th, td {
+    border: 1px solid var(--color-1);
+}
+
+th {
+    background-color: var(--color-4); /* Slate Blue */
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: var(--color-2); /* Light Purple */
+}
+
+tr:hover td {
+    background-color: var(--color-3); /* Green */
+    color: white;
+}
