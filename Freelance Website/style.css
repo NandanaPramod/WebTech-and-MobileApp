@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F2F4F3; /* Light text color */
+    background-color: #0A0908; /* Dark background */
+    line-height: 1.6;
+}
+header {
+    background-color: #49111C; /* Dark brown header */
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: #F2F4F3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #A9927D; /* Muted beige on hover */
+}
+.hero {
+    background-color: #5E503F; /* Darker brown */
+    padding: 50px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2em;
+}
+.section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services {
+    background-color: #0A0908;
+}
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.service-item {
+    background-color: #49111C;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.about {
+    background-color: #5E503F;
+}
+.contact {
+    background-color: #A9927D;
+    color: #0A0908; /* Dark text on light background */
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+}
+.contact button {
+    background-color: #49111C;
+    color: #F2F4F3;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact button:hover {
+    background-color: #5E503F;
+}
+footer {
+    background-color: #0A0908;
+    text-align: center;
+    padding: 20px;
+}
