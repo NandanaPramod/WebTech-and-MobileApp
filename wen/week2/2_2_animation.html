@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+.center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:70vh;
+}
+
+.anim-card {
+    background:#132f2a;
+    padding:30px;
+    border-radius:10px;
+    animation:fade 1.5s ease;
+}
+
+@keyframes fade {
+    from {opacity:0; transform:translateY(-40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="../index.html">WorkWave</a>
+</div>
+
+<div class="container center">
+
+<div class="anim-card">
+<h2>Animated Section</h2>
+<p>Smooth fade-in animation</p>
+</div>
+
+</div>
+
+</body>
+</html>
