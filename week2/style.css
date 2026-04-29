@@ -1,0 +1,12 @@
+body {
+  background: #aea19e;
+}
+
+h2 {
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}

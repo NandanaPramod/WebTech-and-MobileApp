@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Freelance Platform - CSS Lab</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:'Poppins', sans-serif;
+    background:#aea19e;
+    color:#563931;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg,#563931,#7d6157);
+    color:white;
+    padding:90px 20px;
+    text-align:center;
+}
+
+header h1 {
+    font-weight:600;
+    font-size:40px;
+}
+
+header p {
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* NAV */
+nav {
+    background:#5f4139;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+nav a {
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover {
+    opacity:0.7;
+}
+
+/* SECTIONS */
+section {
+    padding:70px 20px;
+    max-width:900px;
+    margin:auto;
+}
+
+h2 {
+    text-align:center;
+    margin-bottom:40px;
+    font-weight:600;
+}
+
+/* CARDS */
+.card {
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin:25px 0;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+.button {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#563931;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.button:hover {
+    background:#7d6157;
+}
+
+/* ANIMATION PREVIEW */
+.preview-box {
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Freelance Service Platform</h1>
+<p>CSS Styling Demonstration (Week 2)</p>
+</header>
+
+<nav>
+<a href="#css">CSS Types</a>
+<a href="#anim">Animation</a>
+</nav>
+
+<section id="css">
+<h2>CSS Styling Methods</h2>
+
+<div class="card">
+<h3>Inline CSS</h3>
+<p>Used for quick styling of freelancer cards.</p>
+<a href="inline.html" class="button">Open Page</a>
+</div>
+
+<div class="card">
+<h3>Internal CSS</h3>
+<p>Used for styling full service pages.</p>
+<a href="internal.html" class="button">Open Page</a>
+</div>
+
+<div class="card">
+<h3>External CSS</h3>
+<p>Used for consistent styling across the platform.</p>
+<a href="external.html" class="button">Open Page</a>
+</div>
+
+</section>
+
+<section id="anim">
+<h2>Animation</h2>
+
+<div class="card">
+<p>Animated freelancer profile card using CSS keyframes.</p>
+<a href="student_record_animation.html" class="button">View Animation</a>
+</div>
+
+</section>
+
+</body>
+</html>
