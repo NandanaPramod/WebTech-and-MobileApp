@@ -1,97 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Freelance Services - Week 1</title>
+<title>Freelance Services - Week 1</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #aea19e;
-            color: #563931;
-            scroll-behavior: smooth;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #88a9c3; /* Blue Gray */
+    color: #14202e; /* Navy */
+}
 
-        header {
-            background: linear-gradient(to right, #563931, #7d6157);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(to right, #091235, #2b4257);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
 
-        nav {
-            background: #5f4139;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
+/* NAV */
+nav {
+    background: #14202e;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav a:hover {
+    opacity: 0.7;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
 
-        th, td {
-            padding: 10px;
-            border: 1px solid #aaa;
-            text-align: center;
-        }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-        input, select, textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px;
-        }
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        iframe {
-            width: 100%;
-            height: 300px;
-            border-radius: 10px;
-            border: none;
-        }
+th {
+    background: #2b4257;
+    color: white;
+}
 
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
 
-    </style>
+/* FORM */
+input, select, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+input[type="submit"], input[type="reset"] {
+    background: #091235;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #14202e;
+}
+
+/* IFRAME */
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* IMAGE */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+</style>
 
 </head>
 
 <body>
 
 <header>
-    <h1>Online Freelance Service Website</h1>
+    <h1>Online Freelance Service Platform</h1>
     <p>Week 1 Lab Programs</p>
 </header>
 
@@ -113,7 +150,6 @@
             <li>Name: John</li>
             <li>Dept: CSE</li>
             <li>Year: 3</li>
-            <li>Section: A</li>
         </ul>
     </div>
 
@@ -122,7 +158,6 @@
         <ol>
             <li>Semester 1</li>
             <li>Semester 2</li>
-            <li>Semester 3</li>
         </ol>
     </div>
 
@@ -183,9 +218,7 @@
 
     <div class="card">
         <p>Click to load image inside iframe:</p>
-
-        <a href="imagepage.html" target="frame">Load Sample Image</a>
-
+        <a href="imagepage.html" target="frame">Load Sample Work</a>
         <iframe name="frame"></iframe>
     </div>
 </section>
@@ -196,16 +229,13 @@
 
     <div class="card">
         <form>
-
             <input type="text" placeholder="Name" required><br>
-
             <input type="email" placeholder="Email" required><br>
 
             <select required>
                 <option>CSE</option>
                 <option>ECE</option>
                 <option>EEE</option>
-                <option>MECH</option>
             </select><br>
 
             <input type="radio" name="g" required>Male
@@ -224,11 +254,11 @@
     <h2>Program 5</h2>
 
     <div class="card">
-        <h3>Google Map</h3>
+        <h3>Service Location</h3>
 
         <iframe src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
-        <h3>Hotspot Image</h3>
+        <h3>Global Reach</h3>
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" usemap="#map">
 
