@@ -1,7 +1,0 @@
-{
-  "freelancers": [
-    {"id":1,"name":"Amit","skill":"Web Developer","rate":500},
-    {"id":2,"name":"Priya","skill":"UI Designer","rate":350},
-    {"id":3,"name":"Rahul","skill":"Content Writer","rate":200}
-  ]
-}
