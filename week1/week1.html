@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freelance Services - Week 1</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #aea19e;
+            color: #563931;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(to right, #563931, #7d6157);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #5f4139;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #aaa;
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Online Freelance Service Website</h1>
+    <p>Week 1 Lab Programs</p>
+</header>
+
+<nav>
+    <a href="#p1">Program 1</a>
+    <a href="#p2">Program 2</a>
+    <a href="#p3">Program 3</a>
+    <a href="#p4">Program 4</a>
+    <a href="#p5">Program 5</a>
+</nav>
+
+<!-- PROGRAM 1 -->
+<section id="p1">
+    <h2>Program 1</h2>
+
+    <div class="card">
+        <h3>Student Details</h3>
+        <ul>
+            <li>Name: John</li>
+            <li>Dept: CSE</li>
+            <li>Year: 3</li>
+            <li>Section: A</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Academic Flow</h3>
+        <ol>
+            <li>Semester 1</li>
+            <li>Semester 2</li>
+            <li>Semester 3</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h3>Records</h3>
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Dept</th></tr>
+            <tr><td>101</td><td>John</td><td>CSE</td></tr>
+            <tr><td>102</td><td>Jane</td><td>ECE</td></tr>
+        </table>
+    </div>
+</section>
+
+<!-- PROGRAM 2 -->
+<section id="p2">
+    <h2>Program 2</h2>
+
+    <div class="card">
+        <h3>Login</h3>
+        <form>
+            <input type="text" placeholder="Username"><br>
+            <input type="password" placeholder="Password"><br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Services</h3>
+        <table>
+            <tr><th>ID</th><th>Service</th><th>Provider</th><th>Price</th></tr>
+            <tr><td>1</td><td>Web Dev</td><td>Alex</td><td>$200</td></tr>
+            <tr><td>2</td><td>Design</td><td>Sam</td><td>$120</td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>Register</h3>
+        <form>
+            <input type="text" placeholder="Name"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="password" placeholder="Password"><br>
+
+            Gender:
+            <input type="radio" name="g">Male
+            <input type="radio" name="g">Female<br>
+
+            <textarea placeholder="Address"></textarea><br>
+
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</section>
+
+<!-- PROGRAM 3 -->
+<section id="p3">
+    <h2>Program 3</h2>
+
+    <div class="card">
+        <p>Click to load image inside iframe:</p>
+
+        <a href="imagepage.html" target="frame">Load Sample Image</a>
+
+        <iframe name="frame"></iframe>
+    </div>
+</section>
+
+<!-- PROGRAM 4 -->
+<section id="p4">
+    <h2>Program 4</h2>
+
+    <div class="card">
+        <form>
+
+            <input type="text" placeholder="Name" required><br>
+
+            <input type="email" placeholder="Email" required><br>
+
+            <select required>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>MECH</option>
+            </select><br>
+
+            <input type="radio" name="g" required>Male
+            <input type="radio" name="g">Female<br>
+
+            <textarea placeholder="Address" required></textarea><br>
+
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</section>
+
+<!-- PROGRAM 5 -->
+<section id="p5">
+    <h2>Program 5</h2>
+
+    <div class="card">
+        <h3>Google Map</h3>
+
+        <iframe src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+        <h3>Hotspot Image</h3>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" usemap="#map">
+
+        <map name="map">
+            <area shape="rect" coords="100,100,200,200" href="#p2">
+        </map>
+    </div>
+</section>
+
+</body>
+</html>
