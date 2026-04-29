@@ -1,0 +1,88 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #88a9c3;
+    color: #14202e;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #091235, #2b4257);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #091235;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #14202e;
+}
+
+/* INPUT FIELDS */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BACK LINK */
+.back {
+    display: inline-block;
+    margin: 20px;
+    color: #091235;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    color: #2b4257;
+}
+
+/* SPECIAL BOX (Program 3) */
+#box {
+    padding: 30px;
+    background: #2b4257;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
