@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethereal Labs | Freelance Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="container hero-content">
+    <h1>Crafting<span> digital experiences</span><br>for forward brands.</h1>
+    <p>Freelance web developer specializing in interactive prototypes, full‑stack experiments, and modern UI. I turn concepts into functional, beautiful web applications.</p>
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+      <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a conversation</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2>About</h2>
+    <p>I'm a freelance developer with a passion for bridging design and engineering. Over 14+ real‑world experiments — from student record systems to real‑time AJAX/JSON integrations — I've built a versatile toolkit to deliver pixel‑perfect, interactive web solutions. Every project is coded from scratch, fully responsive, and performance‑optimized.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><i class="fas fa-code"></i><h3>Custom Web Apps</h3><p>Full‑stack development with HTML, CSS, JS, AJAX, and JSON integration.</p></div>
+      <div class="service-card"><i class="fas fa-laptop-code"></i><h3>Interactive Prototypes</h3><p>Form validation, DOM events, OOP structures, and number‑to‑word utilities.</p></div>
+      <div class="service-card"><i class="fas fa-palette"></i><h3>Modern UI Engineering</h3><p>Premium responsive layouts, keyframe animations, and strict design systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>Selected Work</h2>
+    <p class="section-subtitle">Each card below is a live demo of a complete experiment from the WTMA manual — fully functional inside a modal.</p>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Let's work together</h2>
+    <div class="contact-grid">
+      <div><i class="fas fa-envelope"></i> hello@ethereallabs.dev</div>
+      <div><i class="fab fa-github"></i> /ethereal-labs</div>
+      <div><i class="fab fa-linkedin"></i> ethan-craft</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Ethereal Labs — Freelance web development & interactive experiments</p>
+</footer>
+
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="modalDynamicContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
