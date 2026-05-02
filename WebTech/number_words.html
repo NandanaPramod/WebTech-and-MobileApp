@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><title>Number to Words</title><link rel="stylesheet" href="style.css">
+<style>.word-result { font-size:1.5rem; background:#38443f; padding:1rem; border-radius:28px; margin-top:1rem; }</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="container">
+  <h2>Convert Number to English Words (0–999)</h2>
+  <div class="form-group"><label>Enter number:</label><input type="text" id="numInput" placeholder="e.g., 123"></div>
+  <button id="convertBtn" class="btn-primary">Convert</button>
+  <div id="wordOutput" class="word-result"></div>
+</main>
+<script>
+  const ones = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+  const teens = ['Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'];
+  const tens = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+  function numberToWords(num) {
+    if(num === 0) return 'Zero';
+    let word = '';
+    if(num >= 100) { word += ones[Math.floor(num/100)] + ' Hundred '; num %= 100; }
+    if(num >= 10 && num <= 19) { word += teens[num-10]; num = 0; }
+    else if(num >= 20) { word += tens[Math.floor(num/10)] + ' '; num %= 10; }
+    if(num > 0 && num < 10) word += ones[num];
+    return word.trim();
+  }
+  document.getElementById('convertBtn').addEventListener('click', () => {
+    let val = document.getElementById('numInput').value.trim();
+    if(!/^\d+$/.test(val)) { alert('Only digits allowed (0-999)'); return; }
+    let num = parseInt(val,10);
+    if(num > 999) { alert('Number must be between 0 and 999'); return; }
+    document.getElementById('wordOutput').innerHTML = `In words: ${numberToWords(num)}`;
+  });
+</script>
+</body></html>

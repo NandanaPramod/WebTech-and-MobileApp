@@ -1,0 +1,6 @@
+[
+  { "name": "Aria Chen", "serviceType": "AI Product Strategy", "rating": 4.95 },
+  { "name": "Julian Rivera", "serviceType": "Cloud Architecture", "rating": 4.9 },
+  { "name": "Sophia Dupont", "serviceType": "Web3 Frontend", "rating": 4.88 },
+  { "name": "Kenji Tanaka", "serviceType": "DevOps & CI/CD", "rating": 4.92 }
+]

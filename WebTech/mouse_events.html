@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Mouse Events | NexusForge</title><link rel="stylesheet" href="style.css">
+<style>
+  .interactive-box { background:#38443f; padding:2rem; text-align:center; border-radius:28px; cursor:pointer; transition:0.2s; margin:2rem 0; }
+  .event-msg { background:#1f2826; padding:1rem; border-radius:20px; margin-top:1rem; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav>
+  <h2>🖱️ Interactive Mouse Events Demo</h2>
+  <div class="interactive-box" id="mouseBox" 
+       onmouseover="handleEvent('mouseover', 'green')" 
+       onmouseout="handleEvent('mouseout', '#38443f')" 
+       onclick="handleEvent('click', '#545b33')">
+    Hover, leave, or click me!
+  </div>
+  <div id="eventMessage" class="event-msg">Event will appear here</div>
+</main>
+<script>
+  const box = document.getElementById('mouseBox');
+  const msgDiv = document.getElementById('eventMessage');
+  function handleEvent(eventName, bgColor) {
+    box.style.backgroundColor = bgColor;
+    let text = '';
+    if(eventName === 'mouseover') text = '🐭 Mouse Over — style changed!';
+    else if(eventName === 'mouseout') text = '👋 Mouse Out — style reset.';
+    else if(eventName === 'click') text = '🔘 Click detected! Interactive element activated.';
+    msgDiv.innerHTML = `<strong>${text}</strong>`;
+  }
+</script>
+</body></html>

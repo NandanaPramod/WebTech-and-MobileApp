@@ -1,0 +1,78 @@
+<!-- data.html : AJAX + JSON + TXT double feature -->
+<!DOCTYPE html>
+<html>
+<head><title>Live Talent Feed</title><link rel="stylesheet" href="style.css"></head>
+<body>
+    <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="container">
+  <h2>📡 Freelancer stream & project insights (AJAX)</h2>
+  <div style="background:#1e2624; border-radius:24px; padding:1.5rem; margin-bottom:2rem;">
+    <h3>🔹 Top performers (Live from TXT db)</h3>
+    <button id="loadTxtBtn" class="btn-accent" style="margin-bottom:1rem;">Fetch Freelance TXT records</button>
+    <div id="txtOutput" class="card-grid"></div>
+  </div>
+  <div style="background:#1e2624; border-radius:24px; padding:1.5rem;">
+    <h3>🔹 JSON: High-value Project Index</h3>
+    <button id="loadJsonBtn" class="btn-accent">Load project ratings (JSON)</button>
+    <div id="jsonOutput" class="card-grid" style="margin-top:1rem;"></div>
+  </div>
+</main>
+<script>
+  function loadFromTxt() {
+    fetch('data.txt')
+      .then(res => res.text())
+      .then(data => {
+        const lines = data.split('\n').filter(l => l.trim());
+        const container = document.getElementById('txtOutput');
+        container.innerHTML = '';
+        lines.forEach(line => {
+          const [clientName, expertise, rating] = line.split('|');
+          if(clientName) {
+            const card = document.createElement('div');
+            card.className = 'service-card';
+            card.innerHTML = `<strong>🧑‍💻 ${clientName}</strong><br>🔧 ${expertise}<br>⭐ Rating: ${rating}<br><small style="color:#7f8954">verified talent</small>`;
+            container.appendChild(card);
+          }
+        });
+      });
+  }
+  function loadFromJson() {
+    fetch('data.json')
+      .then(res => res.json())
+      .then(items => {
+        const outDiv = document.getElementById('jsonOutput');
+        outDiv.innerHTML = '';
+        items.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'service-card';
+          card.innerHTML = `<h4>${item.name}</h4><p>Service: ${item.serviceType}</p><div>🏆 Rating: ${item.rating}/5.0</div><span class="badge-internal">premium collaborator</span>`;
+          outDiv.appendChild(card);
+        });
+      });
+  }
+  document.getElementById('loadTxtBtn').addEventListener('click', loadFromTxt);
+  document.getElementById('loadJsonBtn').addEventListener('click', loadFromJson);
+  // load from json on page load optional
+  loadFromJson();
+</script>
+</body></html>

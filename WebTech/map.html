@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Map | NexusForge</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #151a1a;
+  color: #9eaba3;
+  text-align: center;
+}
+
+.map-image {
+  width: 800px;   /* IMPORTANT: fixed size */
+  height: auto;
+  border: 2px solid #545b33;
+  border-radius: 10px;
+}
+
+#regionInfo {
+  margin-top: 20px;
+  padding: 15px;
+  background: #38443f;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #7f8954;
+}
+</style>
+</head>
+
+<body>
+
+<h2>🗺️ India Service Coverage Map</h2>
+<p>Click regions to view services</p>
+
+<!-- IMAGE -->
+<img src="india.png" usemap="#indiaMap" class="map-image">
+
+<!-- MAP -->
+<map name="indiaMap">
+
+  <!-- NORTH -->
+  <area shape="rect" coords="300,50,600,250"
+        onclick="showRegion('North India','Delhi NCR, Chandigarh tech hubs')">
+
+  <!-- WEST -->
+  <area shape="rect" coords="100,250,350,500"
+        onclick="showRegion('West India','Mumbai, Pune startups')">
+
+  <!-- SOUTH -->
+  <area shape="rect" coords="300,500,650,750"
+        onclick="showRegion('South India','Bangalore, Chennai IT hubs')">
+
+  <!-- EAST -->
+  <area shape="rect" coords="600,250,800,550"
+        onclick="showRegion('East India','Kolkata, Odisha tech')">
+
+  <!-- CENTRAL -->
+  <area shape="rect" coords="350,300,600,550"
+        onclick="showRegion('Central India','Indore, Bhopal developers')">
+
+</map>
+
+<!-- OUTPUT -->
+<div id="regionInfo">
+  <h3>Click a region</h3>
+  <p>Details will appear here</p>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function showRegion(name, desc) {
+  document.getElementById("regionInfo").innerHTML =
+    "<h3>" + name + "</h3><p>" + desc + "</p>";
+}
+</script>
+
+</body>
+</html>

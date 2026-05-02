@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><title>Employee Directory</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav><main class="container">
+  <h2>👥 Employee Database</h2>
+  <button id="displayEmpBtn" class="btn-primary">Show Employee List</button>
+  <button id="calcSalaryBtn" class="btn-accent" style="margin-left:1rem;">Calculate Total Salary</button>
+  <div id="empTableContainer" style="margin-top:2rem;"></div>
+  <div id="totalSalaryDiv" style="margin-top:1rem; font-weight:bold;"></div>
+</main>
+<script>
+  const employees = [
+    { id: 101, name: "Arun Kumar", designation: "Lead Developer", salary: 85000 },
+    { id: 102, name: "Divya Sharma", designation: "UI/UX Director", salary: 78000 },
+    { id: 103, name: "Karthik Raj", designation: "AI Engineer", salary: 92000 },
+    { id: 104, name: "Meena Iyer", designation: "Project Manager", salary: 89000 }
+  ];
+  function displayEmployees() {
+    let html = '<table class="data-table"><thead><tr><th>Emp ID</th><th>Name</th><th>Designation</th><th>Salary (USD)</th></tr></thead><tbody>';
+    employees.forEach(emp => { html += `<tr><td>${emp.id}</td><td>${emp.name}</td><td>${emp.designation}</td><td>$${emp.salary}</td></tr>`; });
+    html += '</tbody></table>';
+    document.getElementById('empTableContainer').innerHTML = html;
+  }
+  function calcTotalSalary() {
+    const total = employees.reduce((sum, e) => sum + e.salary, 0);
+    document.getElementById('totalSalaryDiv').innerHTML = `💰 Total Monthly Expenditure: $${total}`;
+  }
+  document.getElementById('displayEmpBtn').addEventListener('click', displayEmployees);
+  document.getElementById('calcSalaryBtn').addEventListener('click', calcTotalSalary);
+</script>
+</body></html>

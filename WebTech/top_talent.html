@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Top Talent | NexusForge</title><link rel="stylesheet" href="style.css">
+<style>
+  /* Internal CSS for keyframe animation on table */
+  .talent-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1f2826;
+    border-radius: 24px;
+    overflow: hidden;
+    animation: slideInTable 0.8s ease-out;
+  }
+  .talent-table th, .talent-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #38443f;
+  }
+  .talent-table th {
+    background: #545b33;
+    color: white;
+  }
+  .animated-title {
+    text-align: center;
+    animation: glowText 2s infinite alternate;
+  }
+  @keyframes slideInTable {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes glowText {
+    from { color: #7f8954; text-shadow: 0 0 2px #7f8954; }
+    to { color: #9eaba3; text-shadow: 0 0 10px #545b33; }
+  }
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="container">
+  <h1 class="animated-title">🌟 Elite Freelancer Showcase</h1>
+  <p style="margin-bottom:1.5rem;">Our highest‑rated professionals – transformed from student records to industry leaders.</p>
+  <table class="talent-table">
+    <thead><tr><th>Freelancer Name</th><th>Specialization</th><th>Rating (out of 5)</th><th>Completed Projects</th></tr></thead>
+    <tbody>
+      <tr><td>Emma Laurent</td><td>Full‑Stack & AI Agents</td><td>4.9 ★</td><td>47</td></tr>
+      <tr><td>Marcus V.</td><td>Blockchain Integration</td><td>4.8 ★</td><td>32</td></tr>
+      <tr><td>Lina Zhang</td><td>UX Research & Design</td><td>5.0 ★</td><td>61</td></tr>
+      <tr><td>Omar El‑Sayed</td><td>React Native Expert</td><td>4.85 ★</td><td>53</td></tr>
+      <tr><td>Aria Chen</td><td>AI Product Strategy</td><td>4.95 ★</td><td>28</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:2rem; text-align:center; font-size:0.9rem; color:#7f8954;">
+    ✨ Data transformed from academic records – each “student” is now a verified freelancer.
+  </div>
+</main>
+</body>
+</html>

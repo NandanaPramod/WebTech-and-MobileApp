@@ -1,0 +1,34 @@
+<!-- embed.html (iframe + image pages) -->
+<!DOCTYPE html>
+<html>
+<head><title>Media Gallery | NexusForge</title><link rel="stylesheet" href="style.css">
+<style> .iframe-container iframe { width:100%; height:450px; border-radius:28px; border:1px solid #545b33; } </style>
+</head>
+<body>
+    <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">NEXUS<span>FORGE</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="data.html">Live Feed</a></li>
+      <li><a href="embed.html">Media Hub</a></li>
+      <li><a href="map.html">Service Map</a></li>
+      <li><a href="frames_demo.html">Frames</a></li>
+      <li><a href="mouse_events.html">Mouse Events</a></li>
+      <li><a href="number_words.html">Num2Words</a></li>
+      <li><a href="employee.html">Employee DB</a></li>
+      <li><a href="top_talent.html" class="btn-accent">⭐ Top Talent</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="container"><h2>Embedded portfolio showcases</h2>
+<div><a href="#" onclick="document.getElementById('contentFrame').src='iframe-pages/design-show.html'; return false;">🎨 Showreel: UI Concept</a> | 
+<a href="#" onclick="document.getElementById('contentFrame').src='iframe-pages/dev-demo.html'; return false;">⚙️ Dev dashboard</a></div>
+<div class="iframe-container"><iframe id="contentFrame" src="iframe-pages/design-show.html" title="portfolio"></iframe></div>
+</main>
+</body></html>

@@ -1,0 +1,4 @@
+Emma Laurent|Full-Stack & AI Agents|4.9
+Marcus V.|Blockchain Integration|4.8
+Lina Zhang|UX Research & Design|5.0
+Omar El-Sayed|React Native Expert|4.85

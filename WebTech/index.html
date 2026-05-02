@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NexusForge | Freelance Tech Studio</title>
+  <!-- External CSS (primary) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts + smooth modern UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* Internal CSS (additional page-specific if needed, but used to comply internal requirement) */
+    .badge-internal {
+      background: #545b33;
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      display: inline-block;
+      color: #fff;
+    }
+    /* global internal override example for one element */
+    .footer-note {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      border-top: 1px solid #38443f;
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">NEXUS<span>FORGE</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="data.html">Live Feed</a></li>
+        <li><a href="embed.html">Media Hub</a></li>
+        <li><a href="map.html">Service Map</a></li>
+        <li class="auth-links"><a href="login.html">Login</a></li>
+        <li class="auth-links"><a href="register.html" class="btn-accent">Sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content" style="animation: fadeUp 0.8s ease-out;">
+        <h1>Where <span class="highlight">elite freelancers</span> & <br>visionary brands connect</h1>
+        <p>High-end web development, AI integration, UX mastery — handpicked talent, zero friction.</p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary">Explore Services</a>
+          <a href="projects.html" style="color:#9eaba3; margin-left:1rem;">View Portfolio →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- inline css example: directly on div -->
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 3rem 2rem;">
+      <div class="stat-card">
+        <h3>150+</h3>
+        <p>Projects delivered</p>
+      </div>
+      <div class="stat-card">
+        <h3>98%</h3>
+        <p>Client retention</p>
+      </div>
+      <div class="stat-card">
+        <h3>4.9★</h3>
+        <p>Global rating</p>
+      </div>
+    </div>
+
+    <section class="featured-grid container">
+      <h2>Curated services <span class="highlight">⚡ premium quality</span></h2>
+      <!-- unordered list demonstration -->
+      <ul class="service-list-horizontal">
+        <li>✨ AI Integration</li>
+        <li>🎨 Immersive UI/UX</li>
+        <li>🛠️ Full-Stack Dev</li>
+        <li>📈 Performance SEO</li>
+      </ul>
+      <!-- ordered list -->
+      <ol class="process-steps">
+        <li>Discovery & strategy</li>
+        <li>Design & prototype</li>
+        <li>Agile development</li>
+        <li>Launch & maintain</li>
+      </ol>
+    </section>
+
+    <!-- Table demonstration: Freelancer roster -->
+    <div class="container">
+      <h2>Top-rated professionals</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Specialist</th><th>Expertise</th><th>Rating</th><th>Avg. response</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Maya Chen</td><td>React/Vue Architect</td><td>4.9 ★</td><td>2h</td></tr>
+          <tr><td>James Okonkwo</td><td>Backend & AI</td><td>5.0 ★</td><td>1h</td></tr>
+          <tr><td>Sophia Laurent</td><td>UI/UX Designer</td><td>4.8 ★</td><td>3h</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <div class="footer-note">© 2025 NexusForge — where innovation meets execution</div>
+  <script src="script.js"></script>
+</body>
+</html>
