@@ -1,3 +1,0 @@
-Student ID: S101, Name: Emma Watson, Program: Computer Science
-Student ID: S102, Name: Liam Chen, Program: Data Science
-Student ID: S103, Name: Zara Khan, Program: Cybersecurity
