@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form Validation</title>
+
+<script>
+function validateForm() {
+
+ let fname = document.forms["regForm"]["fname"].value.trim();
+ let lname = document.forms["regForm"]["lname"].value.trim();
+ let password = document.forms["regForm"]["password"].value.trim();
+ let email = document.forms["regForm"]["email"].value.trim();
+ let mobile = document.forms["regForm"]["mobile"].value.trim();
+ let address = document.forms["regForm"]["address"].value.trim();
+
+ let nameRegex = /^[A-Za-z]{6,}$/;
+ let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+ let mobileRegex = /^[0-9]{10}$/;
+
+ if (!nameRegex.test(fname)) {
+  alert("Invalid First Name");
+  return false;
+ }
+
+ if (lname === "") {
+  alert("Last Name required");
+  return false;
+ }
+
+ if (password.length < 6) {
+  alert("Password too short");
+  return false;
+ }
+
+ if (!emailRegex.test(email)) {
+  alert("Invalid Email");
+  return false;
+ }
+
+ if (!mobileRegex.test(mobile)) {
+  alert("Invalid Mobile");
+  return false;
+ }
+
+ if (address === "") {
+  alert("Address required");
+  return false;
+ }
+
+ alert("Form submitted successfully!");
+ return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Registration Form</h2>
+
+<form name="regForm" onsubmit="return validateForm()">
+
+First Name: <input type="text" name="fname"><br><br>
+Last Name: <input type="text" name="lname"><br><br>
+Password: <input type="password" name="password"><br><br>
+Email: <input type="email" name="email"><br><br>
+Mobile: <input type="text" name="mobile"><br><br>
+Address: <textarea name="address"></textarea><br><br>
+
+<input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
